@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+<!--     <script defer src="main.js"></script>-->    
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="containerMain">
+            <div class="containerForm">    
+    
+                <form id="form" action="enviar.php" method="post" autocomplete="off">
+                    <h2>Let's Get Started!</h2>
+                    <div class="formField">
+                        <input class="input1" type="text" name="username" id="username" required autocomplete="off" placeholder="">
+                        <label for="username">Name <span>*</span></label>
+                        <small></small>
+                    </div>
+        
+                    <div class="formField">
+                        <input class="input1" type="text" name="email" id="email" required autocomplete="off" placeholder="">
+                        <label for="email">Email <span>*</span></label>
+                        <small></small>
+                    </div>
+        
+                    <div class="formField">
+                        <input class="input2" onkeyup="inputWrite()" type="text" name="phone" id="phone" autocomplete="off" placeholder="">
+                        <label class="label2" for="phone">Phone number</label>
+                        <small></small>
+                    </div>
+        
+        
+                    <div class="formFieldTextarea">
+                        <textarea class="" name="message" id="message" placeholder="Message"></textarea>
+                        <small></small>
+                    </div>
+        
+                    <input class="button" type="submit" value="Send">
+                    <p class="warning" id="warning"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const input2 = document.querySelector('.input2');
+        const label2 = document.querySelector('.label2');
+        console.log(input2);
+
+    function inputWrite(){
+        if (input2.value !== '') {
+            label2.classList.add('active');
+        } else {    
+            label2.classList.remove('active');
+        }
+    }
+    </script>
+</body>
+</html>
